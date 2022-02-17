@@ -13,9 +13,37 @@
 -- Remove dulipicate 删重
 
 -- Populate missing data 填充缺失值  //先selfjoin，用where is null找出缺失值，然后用isnull将缺失值替换为指定值，最后update set更新指定列
+Select a.ID,a.Address,b.ID,b.Address,ISNULL(a.Address,b.address)
+From Housing a
+Join Housing b
+  on a.ID=b.ID
+  AND a.uniqueID!=b.uniqueID
+Where a.Address is null
 
+Update a
+SET Address=ISNULL(a.Address,b.address)
+From Housing a
+Join Housing b
+  on a.ID=b.ID
+  AND a.uniqueID!=b.uniqueID
+Where a.Address is null
 
 -- Breaking out 拆分
+1. substring+charindex //substring(目标值，起始位置，终止位置) charindex(目标字符，目标值）
+
+Alter Table Housing
+Add Street Nvarchar(255);
+
+Alter Table Housing
+Add City Nvarchar(255);
+
+Update Housing
+SET Street =substring(Address, 1, charindex(',',Address)-1)
+
+Update Housing
+SET City=substring(Address, charindex(',',Address)+1, len(Address))
+
+2. parsename  //以.为delimiter自动分割，且从右到左1，2，3计数
 
 -- Standardise data format 标准化
 1. CONVERT(Date,SaleDate) //CONVERT(类型，目标值）
