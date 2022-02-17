@@ -1,0 +1,24 @@
+-- Add new data 增
+
+-- Delete table 删表
+
+-- Delete column 删列
+
+-- Alter data 改
+
+-- Find data 查
+
+-- Delete missing data 删空
+
+-- Remove dulipicate 删重
+
+-- Populate missing data 填充缺失值  //先selfjoin，用where is null找出缺失值，然后用isnull将缺失值替换为指定值，最后update set更新指定列
+
+
+-- Breaking out 拆分
+
+-- Standardise data format 标准化
+1. CONVERT(Date,SaleDate) //CONVERT(类型，目标值）
+2. CAST SaleDate as Date  // CAST 目标值 as 类型
+
+--
