@@ -1,10 +1,11 @@
 -- Add new data 增
+insert into table_name values(...),(...)
 
 -- Delete table 删表
-Delete 
+Drop table table_name
 
--- Delete column 删列
-Delete
+-- Delete data
+Delete from table_name where ...
 
 -- Alter data 改
 
@@ -46,9 +47,12 @@ Update Housing
 SET City=substring(Address, charindex(',',Address)+1, len(Address))
 
 2. parsename  //以.为delimiter自动分割，且从右到左1，2，3计数
+parsename(目标，1)
 
 -- Standardise data format 标准化
 1. CONVERT(Date,SaleDate) //CONVERT(类型，目标值）
 2. CAST SaleDate as Date  // CAST 目标值 as 类型
 
 --
+
+lag () over (partition by .. order by ..) as 向下拖一个
