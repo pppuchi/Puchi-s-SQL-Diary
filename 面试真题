@@ -23,3 +23,7 @@ A table consists of user id in the first column, login date in the second column
 A table consists of seller id in the first column, product id in the second and number of product sales in the third
 
 一张表 第一列索引 第二列product是商品名称 第三列price是商品在不同平台的价格
+A table consists of index in the first column, product id in the second and price in the third
+
+1.求删除掉多余的信息（不同平台但价格相同的列为多余信息）
+1.Delete the row that same product with same price
