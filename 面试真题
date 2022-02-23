@@ -1,0 +1,25 @@
+一张表 第一列id记录用户id 第二列date记录该用户上线日期（20200101）
+A table consists of user id in the first column and login date in the second column.
+
+1.求连续三天以上登录的用户名单
+1.List of users who have logged in for at least 3 days
+
+2.求连续三天以上未登录的用户名单
+2.List of users who haven't logged in for at least 3 days
+
+3.每日新增用户人数
+3.Number of increased new users every day
+
+4.统计三日留存人数（第一天登陆后，3天内有第二次登录）
+4.Number of users who logged in at least 2 times in 3 days
+
+一张表 第一列id记录用户id 第二列date记录该用户上线日期（20200101） 第三列action记录用户点击
+A table consists of user id in the first column, login date in the second column and action in the third column
+
+1.求点击A之后立刻点击B的用户名单
+
+
+一张表 第一列id记录商家id 第二列product记录产品名称 第三列记录产品销量
+A table consists of seller id in the first column, product id in the second and number of product sales in the third
+
+一张表 第一列索引 第二列product是商品名称 第三列price是商品在不同平台的价格
