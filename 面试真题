@@ -1,5 +1,15 @@
-一张表 第一列id记录用户id 第二列date记录该用户上线日期（20200101）
+一张表table1 第一列id记录用户id 第二列date记录该用户上线日期（20200101）
 A table consists of user id in the first column and login date in the second column.
+select b.id,b.result, count(1) as num
+from
+(select a.*,(a.date-a.rk) as result
+from
+(select * row_number () over (partition by id order by date) as rk
+from table1
+)a
+)b
+group by b.id,b.result
+having b.num>=3
 
 1.求连续三天以上登录的用户名单
 1.List of users who have logged in for at least 3 days
